@@ -79,17 +79,17 @@ const ContactPage: React.FC = () => {
           {/* Company Images */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <img
-              src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
-              alt="Our Construction Team"
+              src="/renovations/IMG-20250924-WA0034.jpg"
+              alt="Our Renovation Team"
               className="w-full h-40 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
-              alt="Civil Engineering Projects"
+              src="/renovations/IMG-20250924-WA0035.jpg"
+              alt="Renovation Projects"
               className="w-full h-40 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=400&h=250&fit=crop"
+              src="/IT & SECURITY/IMG-20250924-WA0014.jpg"
               alt="IT Solutions Team"
               className="w-full h-40 object-cover rounded-lg shadow-md"
             />

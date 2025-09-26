@@ -16,21 +16,21 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
   const slides = [
     {
-      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Excellence in Construction',
-      subtitle: 'Building the future with precision and quality',
-      service: 'construction' as const
+      image: '/renovations/IMG-20250924-WA0017.jpg',
+      title: 'Excellence in Renovations',
+      subtitle: 'Transforming spaces with precision and quality',
+      service: 'gallery' as const
     },
     {
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Civil Engineering Solutions',
-      subtitle: 'Infrastructure that stands the test of time',
-      service: 'civil' as const
+      image: '/renovations/IMG-20250924-WA0025.jpg',
+      title: 'Professional Renovation Services',
+      subtitle: 'Creating beautiful spaces that stand the test of time',
+      service: 'gallery' as const
     },
     {
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Innovative IT Services',
-      subtitle: 'Technology solutions for modern business',
+      image: '/IT & SECURITY/IMG-20250924-WA0008.jpg',
+      title: 'Innovative IT & Security Services',
+      subtitle: 'Technology and security solutions for modern business',
       service: 'it' as const
     }
   ];
@@ -67,97 +67,96 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   ];
 
   const galleryImages = [
-    // Construction Projects
+    // Renovation Projects
     {
       id: 1,
-      category: 'construction',
-      title: 'Modern Office Complex',
-      description: '12-story commercial building',
-      image: 'https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'renovations',
+      title: 'Residential Renovation 1',
+      description: 'Complete home transformation',
+      image: '/renovations/IMG-20250924-WA0017.jpg'
     },
     {
       id: 2,
-      category: 'construction',
-      title: 'Luxury Residential Tower',
-      description: '25-floor premium complex',
-      image: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'renovations',
+      title: 'Residential Renovation 2',
+      description: 'Modern living space design',
+      image: '/renovations/IMG-20250924-WA0018.jpg'
     },
     {
       id: 3,
-      category: 'construction',
-      title: 'Industrial Warehouse',
-      description: 'State-of-the-art logistics center',
-      image: 'https://images.pexels.com/photos/236722/pexels-photo-236722.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'renovations',
+      title: 'Residential Renovation 3',
+      description: 'Kitchen and bathroom upgrade',
+      image: '/renovations/IMG-20250924-WA0019.jpg'
     },
     {
       id: 4,
-      category: 'construction',
-      title: 'Shopping Center',
-      description: 'Modern retail complex',
-      image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'renovations',
+      title: 'Residential Renovation 4',
+      description: 'Exterior renovation project',
+      image: '/renovations/IMG-20250924-WA0020.jpg'
     },
-    // Civil Engineering Projects
     {
       id: 5,
-      category: 'civil',
-      title: 'Highway Infrastructure',
-      description: 'Major highway expansion',
-      image: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'renovations',
+      title: 'Residential Renovation 5',
+      description: 'Interior design makeover',
+      image: '/renovations/IMG-20250924-WA0021.jpg'
     },
     {
       id: 6,
-      category: 'civil',
-      title: 'Water Treatment Plant',
-      description: 'Municipal water facility',
-      image: 'https://images.pexels.com/photos/1131458/pexels-photo-1131458.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'renovations',
+      title: 'Residential Renovation 6',
+      description: 'Complete property renovation',
+      image: '/renovations/IMG-20250924-WA0022.jpg'
     },
+    // IT & Security Projects
     {
       id: 7,
-      category: 'civil',
-      title: 'Urban Bridge',
-      description: 'Cable-stayed bridge construction',
-      image: 'https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'it',
+      title: 'IT Infrastructure Setup 1',
+      description: 'Network installation project',
+      image: '/IT & SECURITY/IMG-20250924-WA0004.jpg'
     },
     {
       id: 8,
-      category: 'civil',
-      title: 'Metro Station',
-      description: 'Underground transit project',
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      category: 'it',
+      title: 'Security System Installation 1',
+      description: 'Advanced security deployment',
+      image: '/IT & SECURITY/IMG-20250924-WA0005.jpg'
     },
-    // IT Services Projects
     {
       id: 9,
       category: 'it',
-      title: 'Enterprise ERP System',
-      description: 'Custom ERP dashboard',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      title: 'IT Infrastructure Setup 2',
+      description: 'Server room configuration',
+      image: '/IT & SECURITY/IMG-20250924-WA0006.jpg'
     },
     {
       id: 10,
       category: 'it',
-      title: 'Healthcare Platform',
-      description: 'Patient management system',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      title: 'Security System Installation 2',
+      description: 'CCTV monitoring system',
+      image: '/IT & SECURITY/IMG-20250924-WA0007.jpg'
     },
     {
       id: 11,
       category: 'it',
-      title: 'E-commerce Solution',
-      description: 'Online retail platform',
-      image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      title: 'IT Infrastructure Setup 3',
+      description: 'Data center implementation',
+      image: '/IT & SECURITY/IMG-20250924-WA0008.jpg'
     },
     {
       id: 12,
       category: 'it',
-      title: 'Data Center',
-      description: 'Cloud infrastructure management',
-      image: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+      title: 'Security System Installation 3',
+      description: 'Access control system',
+      image: '/IT & SECURITY/IMG-20250924-WA0009.jpg'
     }
   ];
 
-  const filteredGalleryImages = imageFilter === 'all' 
-    ? galleryImages 
+  const filteredGalleryImages = imageFilter === 'all'
+    ? galleryImages
     : galleryImages.filter(img => img.category === imageFilter);
 
   const features = [
@@ -230,9 +229,8 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-all duration-1000 ${
-              index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
-            }`}
+            className={`absolute inset-0 transition-all duration-1000 ${index === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+              }`}
           >
             <img
               src={slide.image}
@@ -294,9 +292,8 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
-              }`}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-white scale-125' : 'bg-white/50 hover:bg-white/75'
+                }`}
             />
           ))}
         </div>
@@ -335,12 +332,12 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           {/* Floating background elements */}
           <div className="absolute top-10 left-10 w-32 h-32 bg-blue-100 rounded-full opacity-20 animate-pulse" />
           <div className="absolute bottom-10 right-10 w-24 h-24 bg-green-100 rounded-full opacity-30 animate-bounce" />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
             {[
-              'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
-              'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
-              'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop'
+              '/renovations/IMG-20250924-WA0023.jpg',
+              '/renovations/IMG-20250924-WA0024.jpg',
+              '/IT & SECURITY/IMG-20250924-WA0010.jpg'
             ].map((image, index) => (
               <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500">
                 <img
@@ -352,7 +349,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 leading-tight">
               Welcome to{' '}
@@ -361,35 +358,33 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed mb-8">
-              We are a leading provider of comprehensive construction, civil engineering, and IT services. 
-              With years of experience and a commitment to excellence, we deliver innovative solutions 
+              We are a leading provider of comprehensive construction, civil engineering, and IT services.
+              With years of experience and a commitment to excellence, we deliver innovative solutions
               that build tomorrow's infrastructure while meeting today's technological needs.
             </p>
-            
+
             {/* Interactive Image Filter Gallery */}
             <div className="mt-16">
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 {[
                   { id: 'all', label: 'All Projects', icon: Building },
-                  { id: 'construction', label: 'Construction', icon: Building },
-                  { id: 'civil', label: 'Civil Engineering', icon: Wrench },
-                  { id: 'it', label: 'IT Services', icon: Monitor }
+                  { id: 'renovations', label: 'Renovations', icon: Building },
+                  { id: 'it', label: 'IT & Security', icon: Monitor }
                 ].map((filter) => (
                   <button
                     key={filter.id}
                     onClick={() => setImageFilter(filter.id)}
-                    className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
-                      imageFilter === filter.id
-                        ? 'bg-gradient-to-r from-blue-600 to-green-600 text-white shadow-lg'
-                        : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg'
-                    }`}
+                    className={`flex items-center px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${imageFilter === filter.id
+                      ? 'bg-gradient-to-r from-blue-600 to-green-600 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg'
+                      }`}
                   >
                     <filter.icon className="mr-2" size={20} />
                     {filter.label}
                   </button>
                 ))}
               </div>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {filteredGalleryImages.slice(0, 8).map((image, index) => (
                   <div
@@ -408,20 +403,17 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       </div>
                     </div>
                     <div className="absolute top-3 left-3">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                        image.category === 'construction' 
-                          ? 'bg-blue-500 text-white'
-                          : image.category === 'civil'
-                          ? 'bg-green-500 text-white'
-                          : 'bg-purple-500 text-white'
-                      }`}>
-                        {image.category.charAt(0).toUpperCase() + image.category.slice(1)}
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${image.category === 'renovations'
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-purple-500 text-white'
+                        }`}>
+                        {image.category === 'renovations' ? 'Renovations' : 'IT & Security'}
                       </span>
                     </div>
                   </div>
                 ))}
               </div>
-              
+
               <div className="text-center mt-8">
                 <button
                   onClick={() => onNavigate('gallery')}
@@ -476,7 +468,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-br from-purple-200/20 to-transparent rounded-full animate-ping" />
           <div className="absolute top-10 right-1/4 w-40 h-40 bg-gradient-to-br from-yellow-200/20 to-transparent rounded-full animate-pulse" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <div className="inline-block px-6 py-2 bg-gradient-to-r from-blue-100 to-green-100 rounded-full mb-6">
@@ -502,11 +494,11 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               >
                 {/* Animated Background Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-green-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
+
                 {/* Floating Elements */}
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-100/30 to-green-100/30 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce transition-all duration-500" />
                 <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-green-100/30 to-blue-100/30 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-all duration-700" />
-                
+
                 <div className="relative z-10 p-12">
                   <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-green-600 rounded-3xl flex items-center justify-center mb-8 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shadow-2xl group-hover:shadow-blue-500/25">
                     <service.icon className="text-white group-hover:scale-110 transition-transform duration-300" size={40} />
@@ -519,7 +511,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   <p className="text-gray-600 mb-10 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-4 mb-10">
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center group/item">
@@ -532,7 +524,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <button
                     onClick={() => onNavigate(service.page)}
                     className="group/btn relative overflow-hidden px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-bold rounded-2xl hover:from-blue-700 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl w-full"
@@ -544,13 +536,13 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-600 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                   </button>
                 </div>
-                
+
                 {/* Hover Border Effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-500 to-green-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl" />
               </div>
             ))}
           </div>
-          
+
           {/* Service Statistics */}
           <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
@@ -606,13 +598,13 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     <p className="text-gray-600">{testimonial.company}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="text-yellow-400 fill-current" size={20} />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-700 leading-relaxed italic">
                   "{testimonial.text}"
                 </p>
@@ -630,7 +622,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="absolute bottom-20 right-20 w-32 h-32 bg-green-400/20 rounded-full animate-bounce" />
           <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-blue-400/20 rounded-full animate-ping" />
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
             Ready to Start Your{' '}
@@ -639,7 +631,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </span>
           </h2>
           <p className="text-2xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Get in touch with our expert team to discuss your construction, civil engineering, 
+            Get in touch with our expert team to discuss your construction, civil engineering,
             or IT service needs. We're here to bring your vision to life with unmatched expertise and dedication.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -657,7 +649,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               View Our Work
             </button>
           </div>
-          
+
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
             <div className="flex items-center justify-center">
               <Clock className="mr-3" size={24} />

@@ -16,22 +16,22 @@ const ITServicesPage: React.FC = () => {
 
   const caseStudies = [
     {
-      title: 'Enterprise ERP System',
-      description: 'Custom ERP solution for manufacturing company with 500+ employees',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['Cloud-based architecture', 'Real-time analytics', '99.9% uptime', 'Deployed 2023']
+      title: 'IT Infrastructure Setup',
+      description: 'Complete network infrastructure installation for enterprise client',
+      image: '/IT & SECURITY/IMG-20250924-WA0004.jpg',
+      details: ['Network architecture', 'Server configuration', '24/7 monitoring', 'Deployed 2024']
     },
     {
-      title: 'Healthcare Management Platform',
-      description: 'Comprehensive patient management system for medical practices',
-      image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['HIPAA compliant', 'Mobile applications', 'Integration APIs', 'Deployed 2023']
+      title: 'Security System Installation',
+      description: 'Comprehensive security system deployment for commercial facility',
+      image: '/IT & SECURITY/IMG-20250924-WA0005.jpg',
+      details: ['CCTV surveillance', 'Access control', 'Alarm systems', 'Deployed 2024']
     },
     {
-      title: 'E-commerce Solution',
-      description: 'Scalable online retail platform with advanced analytics',
-      image: 'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['Multi-tenant architecture', 'Payment integration', 'AI recommendations', 'Deployed 2022']
+      title: 'Data Center Implementation',
+      description: 'Enterprise data center setup with redundancy and backup systems',
+      image: '/IT & SECURITY/IMG-20250924-WA0008.jpg',
+      details: ['Redundant systems', 'Backup solutions', 'Climate control', 'Deployed 2024']
     }
   ];
 
@@ -103,22 +103,22 @@ const ITServicesPage: React.FC = () => {
           {/* Service Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <img
-              src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Software Development"
+              src="/IT & SECURITY/IMG-20250924-WA0010.jpg"
+              alt="IT Infrastructure"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Cybersecurity"
+              src="/IT & SECURITY/IMG-20250924-WA0011.jpg"
+              alt="Security Systems"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Cloud Solutions"
+              src="/IT & SECURITY/IMG-20250924-WA0012.jpg"
+              alt="Network Solutions"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
+              src="/IT & SECURITY/IMG-20250924-WA0013.jpg"
               alt="System Integration"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />

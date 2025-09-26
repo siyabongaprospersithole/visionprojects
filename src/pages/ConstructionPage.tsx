@@ -15,22 +15,22 @@ const ConstructionPage: React.FC = () => {
 
   const projects = [
     {
-      title: 'Modern Office Complex',
-      description: 'A 12-story commercial building with sustainable design features',
-      image: 'https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['12 floors', '50,000 sq ft', 'LEED certified', 'Completed 2023']
+      title: 'Residential Renovation Project 1',
+      description: 'Complete home renovation with modern design features',
+      image: '/renovations/IMG-20250924-WA0027.jpg',
+      details: ['Full renovation', 'Modern design', 'Quality finishes', 'Completed 2024']
     },
     {
-      title: 'Luxury Residential Tower',
-      description: 'Premium residential complex with panoramic city views',
-      image: 'https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['25 floors', '200 units', 'Premium finishes', 'Completed 2023']
+      title: 'Residential Renovation Project 2',
+      description: 'Premium home renovation with contemporary styling',
+      image: '/renovations/IMG-20250924-WA0028.jpg',
+      details: ['Interior renovation', 'Premium materials', 'Custom design', 'Completed 2024']
     },
     {
-      title: 'Industrial Warehouse',
-      description: 'State-of-the-art logistics and distribution center',
-      image: 'https://images.pexels.com/photos/236722/pexels-photo-236722.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['100,000 sq ft', 'Automated systems', '24/7 operations', 'Completed 2022']
+      title: 'Residential Renovation Project 3',
+      description: 'Comprehensive property renovation and modernization',
+      image: '/renovations/IMG-20250924-WA0029.jpg',
+      details: ['Complete makeover', 'Modern systems', 'Quality craftsmanship', 'Completed 2024']
     }
   ];
 
@@ -101,23 +101,23 @@ const ConstructionPage: React.FC = () => {
           {/* Service Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <img
-              src="https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Commercial Construction"
+              src="/renovations/IMG-20250924-WA0030.jpg"
+              alt="Residential Renovation"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Residential Projects"
+              src="/renovations/IMG-20250924-WA0031.jpg"
+              alt="Home Renovation"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/236722/pexels-photo-236722.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Industrial Construction"
+              src="/renovations/IMG-20250924-WA0032.jpg"
+              alt="Property Renovation"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Quality Construction"
+              src="/renovations/IMG-20250924-WA0033.jpg"
+              alt="Quality Renovation"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
           </div>

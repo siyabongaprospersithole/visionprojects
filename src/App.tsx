@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import HomePage from './pages/HomePage';
 import ConstructionPage from './pages/ConstructionPage';
@@ -7,38 +8,29 @@ import ITServicesPage from './pages/ITServicesPage';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 
-type PageType = 'home' | 'construction' | 'civil' | 'it' | 'gallery' | 'contact';
-
-function App() {
-  const [currentPage, setCurrentPage] = useState<PageType>('home');
+function AppContent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navigation = [
-    { id: 'home', label: 'Home' },
-    { id: 'construction', label: 'Construction' },
-    { id: 'civil', label: 'Civil Engineering' },
-    { id: 'it', label: 'IT Services' },
-    { id: 'gallery', label: 'Gallery' },
-    { id: 'contact', label: 'Contact' },
+    { id: '/', label: 'Home' },
+    { id: '/construction', label: 'Construction' },
+    { id: '/civil', label: 'Civil Engineering' },
+    { id: '/it', label: 'IT Services' },
+    { id: '/gallery', label: 'Gallery' },
+    { id: '/contact', label: 'Contact' },
   ];
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <HomePage onNavigate={setCurrentPage} />;
-      case 'construction':
-        return <ConstructionPage />;
-      case 'civil':
-        return <CivilEngineeringPage />;
-      case 'it':
-        return <ITServicesPage />;
-      case 'gallery':
-        return <GalleryPage />;
-      case 'contact':
-        return <ContactPage />;
-      default:
-        return <HomePage onNavigate={setCurrentPage} />;
-    }
+  const handleNavigate = (page: string) => {
+    const routeMap: { [key: string]: string } = {
+      'construction': '/construction',
+      'civil': '/civil',
+      'it': '/it',
+      'gallery': '/gallery',
+      'contact': '/contact'
+    };
+    navigate(routeMap[page] || '/');
   };
 
   return (
@@ -47,7 +39,7 @@ function App() {
       <header className="bg-white/80 backdrop-blur-md shadow-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center animated-element delay-2">
+            <Link to="/" className="flex items-center animated-element delay-2">
               <div className="w-12 h-12 shine-effect rounded-lg flex items-center justify-center p-[2px] shadow-lg overflow-hidden bg-gradient-to-br from-primary via-primary-light to-primary-dark">
                 <div className="w-full h-full bg-white/90 backdrop-blur-sm rounded-lg flex items-center justify-center floating">
                   <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-light to-primary-dark">SVP</span>
@@ -59,28 +51,30 @@ function App() {
                 </h1>
                 <p className="text-sm text-gray-600 slide-in-bottom delay-4">Crafting Excellence, Building Future</p>
               </div>
-            </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               <div className="flex space-x-8">
                 {navigation.map((item, index) => (
-                  <button
+                  <Link
                     key={item.id}
-                    onClick={() => setCurrentPage(item.id as PageType)}
-                    className={`nav-item px-3 py-2 text-sm font-medium animated-element delay-${index + 2} 
-                      ${currentPage === item.id ? 'text-sky-500' : 'text-gray-700'}`}
+                    to={item.id}
+                    className={`nav-item px-3 py-2 text-sm font-medium animated-element delay-${index + 2} transition-colors duration-200
+                      ${location.pathname === item.id ? 'text-sky-500' : 'text-gray-700 hover:text-sky-500'}`}
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </nav>
 
             {/* Mobile menu button */}
             <button
+              type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-md text-gray-700 hover:text-primary-light transition-all duration-300"
+              aria-label="Toggle mobile menu"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -91,20 +85,18 @@ function App() {
             <div className="md:hidden py-4 border-t slide-in-bottom">
               <div className="space-y-2">
                 {navigation.map((item, index) => (
-                  <button
+                  <Link
                     key={item.id}
-                    onClick={() => {
-                      setCurrentPage(item.id as PageType);
-                      setIsMenuOpen(false);
-                    }}
-                    className={`block w-full text-left px-3 py-2 text-sm font-medium card animated-element delay-${index + 1} ${
-                      currentPage === item.id
+                    to={item.id}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block w-full text-left px-3 py-2 text-sm font-medium card animated-element delay-${index + 1} transition-colors duration-200 ${
+                      location.pathname === item.id
                         ? 'bg-sky-50/50 border-l-4 border-sky-500 text-sky-600'
                         : 'hover:bg-white/50 text-gray-700 hover:text-sky-600'
                     }`}
                   >
                     {item.label}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -113,7 +105,16 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="min-h-[calc(100vh-64px)]">{renderPage()}</main>
+      <main className="min-h-[calc(100vh-64px)]">
+        <Routes>
+          <Route path="/" element={<HomePage onNavigate={handleNavigate} />} />
+          <Route path="/construction" element={<ConstructionPage />} />
+          <Route path="/civil" element={<CivilEngineeringPage />} />
+          <Route path="/it" element={<ITServicesPage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </main>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white">
@@ -141,36 +142,36 @@ function App() {
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
                 <li>
-                  <button 
-                    onClick={() => setCurrentPage('construction')}
+                  <Link 
+                    to="/construction"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     Construction
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setCurrentPage('civil')}
+                  <Link 
+                    to="/civil"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     Civil Engineering
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setCurrentPage('it')}
+                  <Link 
+                    to="/it"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     IT Services
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setCurrentPage('gallery')}
+                  <Link 
+                    to="/gallery"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     Gallery
-                  </button>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -180,20 +181,20 @@ function App() {
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <button 
-                    onClick={() => setCurrentPage('home')}
+                  <Link 
+                    to="/"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     Home
-                  </button>
+                  </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => setCurrentPage('contact')}
+                  <Link 
+                    to="/contact"
                     className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
                   >
                     Contact Us
-                  </button>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 text-sm">
@@ -249,6 +250,14 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }
 

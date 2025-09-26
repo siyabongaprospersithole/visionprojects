@@ -15,22 +15,22 @@ const CivilEngineeringPage: React.FC = () => {
 
   const projects = [
     {
-      title: 'Highway Infrastructure Development',
-      description: 'Major highway expansion with advanced drainage systems',
-      image: 'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['25km highway', 'Smart traffic systems', 'Environmental compliance', 'Completed 2023']
+      title: 'Residential Property Development',
+      description: 'Complete residential renovation with structural improvements',
+      image: '/renovations/IMG-20250924-WA0036.jpg',
+      details: ['Structural renovation', 'Modern systems', 'Quality materials', 'Completed 2024']
     },
     {
-      title: 'Municipal Water Treatment Plant',
-      description: 'State-of-the-art water treatment facility serving 100,000 residents',
-      image: 'https://images.pexels.com/photos/1131458/pexels-photo-1131458.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['50ML/day capacity', 'Advanced filtration', 'Remote monitoring', 'Completed 2023']
+      title: 'Home Renovation Project',
+      description: 'Comprehensive home renovation with modern amenities',
+      image: '/renovations/IMG-20250924-WA0037.jpg',
+      details: ['Full renovation', 'Modern design', 'Energy efficient', 'Completed 2024']
     },
     {
-      title: 'Urban Bridge Construction',
-      description: 'Modern cable-stayed bridge connecting two business districts',
-      image: 'https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&w=800',
-      details: ['500m span', 'Seismic resistant', 'Pedestrian walkways', 'Completed 2022']
+      title: 'Property Modernization',
+      description: 'Complete property upgrade with contemporary features',
+      image: '/renovations/IMG-20250924-WA0038.jpg',
+      details: ['Modern upgrades', 'Quality finishes', 'Improved functionality', 'Completed 2024']
     }
   ];
 
@@ -101,23 +101,23 @@ const CivilEngineeringPage: React.FC = () => {
           {/* Service Images */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             <img
-              src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Transportation Engineering"
+              src="/renovations/IMG-20250924-WA0039.jpg"
+              alt="Residential Renovation"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/1131458/pexels-photo-1131458.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Water Management"
+              src="/renovations/IMG-20250924-WA0040.jpg"
+              alt="Property Development"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/681391/pexels-photo-681391.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Structural Engineering"
+              src="/renovations/IMG-20250924-WA0041.jpg"
+              alt="Home Renovation"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
             <img
-              src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop"
-              alt="Site Development"
+              src="/renovations/IMG-20250924-WA0042.jpg"
+              alt="Property Modernization"
               className="w-full h-32 object-cover rounded-lg shadow-md"
             />
           </div>

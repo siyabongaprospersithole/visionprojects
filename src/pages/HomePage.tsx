@@ -60,8 +60,8 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: Building },
-    { number: '15+', label: 'Years Experience', icon: Clock },
+    { number: '20+', label: 'Projects Completed', icon: Building },
+    { number: '5+', label: 'Years Experience', icon: Clock },
     { number: '98%', label: 'Client Satisfaction', icon: Star },
     { number: '50+', label: 'Expert Team Members', icon: Users }
   ];

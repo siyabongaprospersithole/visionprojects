@@ -337,11 +337,11 @@ const CivilEngineeringPage: React.FC = () => {
                 <div className="flex items-center justify-center space-x-4 text-gray-600">
                   <div className="flex items-center">
                     <Phone size={16} className="mr-2" />
-                    <span className="text-sm">+27 21 123 4568</span>
+                    <span className="text-sm">0693878987</span>
                   </div>
                   <div className="flex items-center">
                     <Mail size={16} className="mr-2" />
-                    <span className="text-sm">civil@Subsequentvisionprojects.co.za</span>
+                    <span className="text-sm">support@subsequentvisionprokects.co.za</span>
                   </div>
                 </div>
               </div>

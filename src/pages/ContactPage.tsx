@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import GoogleMap from '../components/GoogleMap';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -34,19 +35,19 @@ const ContactPage: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+27 21 123 4567', '+27 21 123 4568'],
+      details: ['0693878987', '0693878987'],
       color: 'text-blue-600'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@Subsequentvisionprojects.co.za', 'quotes@Subsequentvisionprojects.co.za'],
+      details: ['support@subsequentvisionprokects.co.za', 'support@subsequentvisionprokects.co.za'],
       color: 'text-green-600'
     },
     {
       icon: MapPin,
       title: 'Address',
-      details: ['123 Business Park', 'Cape Town, 8000', 'South Africa'],
+      details: ['15 White Road', 'Ladysmith 3370', 'South Africa'],
       color: 'text-purple-600'
     },
     {
@@ -172,7 +173,7 @@ const ContactPage: React.FC = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="+27 XX XXX XXXX"
+                      placeholder="0693878987"
                     />
                   </div>
                   <div>
@@ -227,13 +228,12 @@ const ContactPage: React.FC = () => {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Find Our Office</h2>
               
-              {/* Map Placeholder */}
-              <div className="bg-gray-200 h-64 rounded-lg mb-8 flex items-center justify-center">
-                <div className="text-center text-gray-600">
-                  <MapPin size={48} className="mx-auto mb-4" />
-                  <p className="text-lg font-medium">Interactive Map</p>
-                  <p className="text-sm">123 Business Park, Cape Town, 8000</p>
-                </div>
+              {/* Google Maps */}
+              <div className="relative h-64 rounded-lg mb-8 overflow-hidden shadow-lg">
+                <GoogleMap 
+                  address="15 White Road, Ladysmith 3370, South Africa"
+                  className="w-full h-full"
+                />
               </div>
 
               {/* Office Hours and Additional Info */}
@@ -255,7 +255,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h4 className="font-medium text-gray-900">Emergency Contact</h4>
                       <p className="text-gray-600 text-sm">24/7 Emergency Support Available</p>
-                      <p className="text-gray-600 text-sm">+27 82 XXX XXXX</p>
+                      <p className="text-gray-600 text-sm">0693878987</p>
                     </div>
                   </div>
                   
@@ -263,9 +263,9 @@ const ContactPage: React.FC = () => {
                     <Mail className="text-purple-600 mr-3 mt-1" size={20} />
                     <div>
                       <h4 className="font-medium text-gray-900">Department Emails</h4>
-                      <p className="text-gray-600 text-sm">Construction: construction@Subsequentvisionprojects.co.za</p>
-                      <p className="text-gray-600 text-sm">Civil Eng: civil@Subsequentvisionprojects.co.za</p>
-                      <p className="text-gray-600 text-sm">IT Services: it@Subsequentvisionprojects.co.za</p>
+                      <p className="text-gray-600 text-sm">Construction: support@subsequentvisionprokects.co.za</p>
+                      <p className="text-gray-600 text-sm">Civil Eng: support@subsequentvisionprokects.co.za</p>
+                      <p className="text-gray-600 text-sm">IT Services: support@subsequentvisionprokects.co.za</p>
                     </div>
                   </div>
                 </div>
@@ -284,14 +284,14 @@ const ContactPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+27211234567"
+              href="tel:0693878987"
               className="px-8 py-4 bg-white text-blue-700 font-semibold rounded-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-200 flex items-center justify-center"
             >
               <Phone className="mr-2" size={20} />
               Call Now
             </a>
             <a
-              href="mailto:info@Subsequentvisionprojects.co.za"
+              href="mailto:support@subsequentvisionprokects.co.za"
               className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-700 transition-all duration-200 flex items-center justify-center"
             >
               <Mail className="mr-2" size={20} />

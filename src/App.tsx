@@ -215,15 +215,15 @@ function AppContent() {
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <MapPin size={16} className="text-blue-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-400 text-sm">123 Business Park, Cape Town, 8000</span>
+                  <span className="text-gray-400 text-sm">15 White Road, Ladysmith 3370</span>
                 </li>
                 <li className="flex items-center">
                   <Phone size={16} className="text-blue-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-400 text-sm">+27 21 123 4567</span>
+                  <span className="text-gray-400 text-sm">0693878987</span>
                 </li>
                 <li className="flex items-center">
                   <Mail size={16} className="text-blue-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-400 text-sm">info@subsequentvisionprojects.co.za</span>
+                  <span className="text-gray-400 text-sm">support@subsequentvisionprokects.co.za</span>
                 </li>
               </ul>
             </div>
